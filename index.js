@@ -67,12 +67,31 @@ function checkAge(name, age){
 
 }
 
+checkSimpleNumber(167)
 //EXERCISE #3
 function checkSimpleNumber(simpleNumber){
-    if(simpleNumber==1 || simpleNumber==3 || simpleNumber==5 || simpleNumber==7) {console.log("true")}
-     else if(simpleNumber%2==0 || simpleNumber%3==0 || simpleNumber%5==0 || simpleNumber%7==0){
-    console.log("false")} else{console.log("true")};
+
+    if (simpleNumber == 2){
+            console.log(true);
+
+        } else if (simpleNumber%2 == 0 & simpleNumber != 2){
+            console.log(false);
+
+        } else{
+            for(let i = 3; i <= simpleNumber; i++ ){
+                    
+                if(Number.isInteger(simpleNumber/i) & i != simpleNumber){
+                    console.log(false);
+                    break 
+
+                } else if(i==simpleNumber){ 
+                    console.log(true)
+                    break
+                }
+            };
+    }
 }
+
 
 //EXERCISE #4
 function checkEven(number){
